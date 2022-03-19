@@ -558,8 +558,10 @@ class App extends React.Component
                                     <h2>Contact Info</h2>
                                 </div>
                                 <address>
-                                    <p>+** **** ****, +** **** ****</p>
-                                    <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                                    <p>+216 73 382 656</p>
+                                    <p>+216 73 382 658</p>
+
+                                    <p><a href="mailto:youremail.co">issatso@issatso.rnu.tn</a></p>
                                 </address>
                                 <div class="footer_menu">
                                     <h2>Quick Links</h2>
