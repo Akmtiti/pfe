@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Search from './search';
+
 class App extends React.Component
 {
   
@@ -38,11 +40,18 @@ class App extends React.Component
                           <li><a href="#contact" class="smoothScroll">Contact</a></li>
                           <li><a href="#about" class="smoothScroll">About</a></li>
                           
+                          <li><a href="#login"><i class="smoothScroll"></i> Login</a></li>
 
                       </ul>
-                      <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#login"><i class="smoothScroll"></i> Login</a></li>
+                
+                      <ul class="search bar">
+                          <br></br>
+                          
+
+                           <Search />
                       </ul>
+
+                   
                       
                 </div>
             </div>
@@ -124,7 +133,7 @@ class App extends React.Component
                       <div class="col-md-offset-1 col-md-4 col-sm-12">
                           <div class="entry-form">
                                
-                                    <h2>Signin now </h2>
+                                    <h2>SIGN IN  </h2>
                                     <input type="email" name="email" class="form-control" placeholder="Your email address" required="" />
                                     <input type="password" name="password" class="form-control" placeholder="Your password" required="" />
                                     <button class="submit-btn form-control" id="form-submit">Login</button>
@@ -140,7 +149,7 @@ class App extends React.Component
                       <div class="col-md-offset-1 col-md-4 col-sm-12">
                           <div class="entry-form">
                                
-                                    <h2>Signup now</h2>
+                                    <h2>SIGN UP</h2>
                                     <input type="text" name="full name" class="form-control" placeholder="Full name" required="" />
                                     <input type="email" name="email" class="form-control" placeholder="Your email address" required="" />
                                     <input type="password" name="password" class="form-control" placeholder="Password" required="" />
@@ -161,10 +170,12 @@ class App extends React.Component
                                 <h2>Teachers <small>Meet Professional Trainers</small></h2>
                           </div>
                       </div>
+                      <div className="owl-carousel owl-theme owl-courses">
+
                       <div class="col-md-3 col-sm-6">
                           <div class="team-thumb">
                                 <div class="team-image">
-                                    <img src="assets/images/author-image1.jpg" class="img-responsive" alt="" />
+                                    <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
                                     <h3>Mark Wilson</h3>
@@ -180,7 +191,7 @@ class App extends React.Component
                       <div class="col-md-3 col-sm-6">
                           <div class="team-thumb">
                                 <div class="team-image">
-                                    <img src="assets/images/author-image2.jpg" class="img-responsive" alt="" />
+                                    <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
                                     <h3>Catherine</h3>
@@ -195,7 +206,7 @@ class App extends React.Component
                       <div class="col-md-3 col-sm-6">
                           <div class="team-thumb">
                                 <div class="team-image">
-                                    <img src="assets/images/author-image3.jpg" class="img-responsive" alt="" />
+                                    <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
                                     <h3>Jessie Ca</h3>
@@ -211,7 +222,23 @@ class App extends React.Component
                       <div class="col-md-3 col-sm-6">
                           <div class="team-thumb">
                                 <div class="team-image">
-                                    <img src="assets/images/author-image4.jpg" class="img-responsive" alt="" />
+                                    <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
+                                </div>
+                                <div class="team-info">
+                                    <h3>Jessie Ca</h3>
+                                    <span>I like Online Courses</span>
+                                </div>
+                                <ul class="social-icon">
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                          <div class="team-thumb">
+                                <div class="team-image">
+                                    <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
                                     <h3>Andrew Berti</h3>
@@ -225,6 +252,7 @@ class App extends React.Component
                           </div>
                       </div>
                 </div>
+            </div>
             </div>
         </section>
         
@@ -254,11 +282,11 @@ class App extends React.Component
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
-                                                        <img src="assets/images/author-image1.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                                         <span>Mark Wilson</span>
                                                     </div>
-                                                    <div class="courses-price">
-                                                        <a href="#"><span>USD 25</span></a>
+                                                    <div class="courses-price free">
+                                                        <a ><span>Free</span></a>
                                                     </div>
                                               </div>
                                           </div>
@@ -282,11 +310,11 @@ class App extends React.Component
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
-                                                        <img src="assets/images/author-image2.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                                         <span>Jessica</span>
                                                     </div>
-                                                    <div class="courses-price">
-                                                        <a href="#"><span>USD 80</span></a>
+                                                    <div class="courses-price free">
+                                                        <a ><span>Free</span></a>
                                                     </div>
                                               </div>
                                           </div>
@@ -310,11 +338,11 @@ class App extends React.Component
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
-                                                        <img src="assets/images/author-image3.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                                         <span>Catherine</span>
                                                     </div>
                                                     <div class="courses-price free">
-                                                        <a href="#"><span>Free</span></a>
+                                                        <a ><span>Free</span></a>
                                                     </div>
                                               </div>
                                           </div>
@@ -338,11 +366,11 @@ class App extends React.Component
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
-                                                        <img src="assets/images/author-image1.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                                         <span>Mark Wilson</span>
                                                     </div>
-                                                    <div class="courses-price">
-                                                        <a href="#"><span>USD 45</span></a>
+                                                    <div class="courses-price free">
+                                                        <a ><span>Free</span></a>
                                                     </div>
                                               </div>
                                           </div>
@@ -366,11 +394,11 @@ class App extends React.Component
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
-                                                        <img src="assets/images/author-image2.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                                         <span>Jessica</span>
                                                     </div>
                                                     <div class="courses-price free">
-                                                        <a href="#"><span>Free</span></a>
+                                                        <a href=""><span>Free</span></a>
                                                     </div>
                                               </div>
                                           </div>
@@ -534,34 +562,38 @@ class App extends React.Component
                 <div class="row">
                       <div class="col-md-4 col-sm-6">
                           <div class="footer-info">
-                                <div class="section-title">
-                                    <h2>Headquarter</h2>
-                                </div>
-                                <address>
-                                    <p>1800 ***** a **** ****,<br /> ***** a **** **** 12000</p>
-                                </address>
+                           
+                              
                                 <ul class="social-icon">
-                                    <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                    <li><a href="https://www.facebook.com/IssatSo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
                                     <li><a href="#" class="fa fa-instagram"></a></li>
+                                    <li><a href="#" class="fa fa-youtube"></a></li>
                                 </ul>
                                 <div class="copyright-text"> 
-                                    <p>Copyright &copy; 2022 Company Name</p>
+                                    <p>Copyright &copy; 2022  Institut Supérieur des Sciences Appliquées et de Technologie de Sousse</p>
                                     
-                                    <p>Design: By Love</p>
+                                    <p>Design: Akram Mourali</p>
+
                                 </div>
+                                
                           </div>
+                           <div class="localisation"> 
+                            <a href="#"   class="fa fa-map-marker" aria-hidden="true"> &nbsp;&nbsp;ISSAT Sousse Cité Taffala (Ibn Khaldoun) 4003 <br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sousse Tunisie</a>
+                                </div>
                       </div>
+                      
                       <div class="col-md-4 col-sm-6">
                           <div class="footer-info">
                                 <div class="section-title">
                                     <h2>Contact Info</h2>
                                 </div>
                                 <address>
-                                    <p>+216 73 382 656</p>
-                                    <p>+216 73 382 658</p>
-
-                                    <p><a href="mailto:youremail.co">issatso@issatso.rnu.tn</a></p>
+                                <div class="social-icon">
+                                <p>  <a href="#" class="fa fa-phone"> +216 73 382 656</a></p>
+                                <p>  <a href="#" class="fa fa-fax"> +216 73 382 658</a></p>
+                                </div>
+                                    <p> <a href = "mailto: issatso@issatso.rnu.tn"class="fa fa-envelope">  issatso@issatso.rnu.tn</a></p>
                                 </address>
                                 <div class="footer_menu">
                                     <h2>Quick Links</h2>
@@ -597,3 +629,4 @@ class App extends React.Component
   </div>
 ) } }
  export default App;
+ 
