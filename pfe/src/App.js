@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
+import Button from 'react-bootstrap/Button';
 import Search from './search';
-
+import StarRating from './StarRating.js';
 class App extends React.Component
 {
   
@@ -36,20 +37,17 @@ class App extends React.Component
                           <li><a href="#top" class="smoothScroll">Home</a></li>
                           <li><a href="#team" class="smoothScroll">Our Teachers</a></li>
                           <li><a href="#courses" class="smoothScroll">Courses</a></li>
-                          <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
-                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-                          <li><a href="#about" class="smoothScroll">About</a></li>
-                          
+                          <li><a href="#contact" class="smoothScroll">Contact</a></li>  
+                          <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>                        
                           <li><a href="#login"><i class="smoothScroll"></i> Login</a></li>
-
                       </ul>
                 
-                      <ul class="search bar">
-                          <br></br>
-                          
-
-                           <Search />
-                      </ul>
+                      <div class="search bar">
+                        
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Search />
+                           
+                      
+                           </div>
 
                    
                       
@@ -64,8 +62,8 @@ class App extends React.Component
                                 <div class="caption">
                                     <div class="container">
                                           <div class="col-md-6 col-sm-12">
-                                              <h1>Distance Learning Education Center</h1>
-                                              <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
+                                              <h1>Distance Learning Education </h1>
+                                              <h3>Our online courses are designed to help students in their subjects with latest technologies.</h3>
                                               <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
                                           </div>
                                     </div>
@@ -76,7 +74,7 @@ class App extends React.Component
                                     <div class="container">
                                           <div class="col-md-6 col-sm-12">
                                               <h1>Start your journey with our practical courses</h1>
-                                              <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
+                                              <h3>Our courses are built in partnership with your teachers and are designed to facilitate your .</h3>
                                               <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
                                           </div>
                                     </div>
@@ -86,8 +84,8 @@ class App extends React.Component
                                 <div class="caption">
                                     <div class="container">
                                           <div class="col-md-6 col-sm-12">
-                                              <h1>Efficient Learning Methods</h1>
-                                              <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
+                                              <h1>Talk with us!</h1>
+                                              <h3> Don't hesitate to ask an'y question at any time, we are here to help you. </h3>
                                               <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
                                           </div>
                                     </div>
@@ -97,35 +95,8 @@ class App extends React.Component
             </div>
         </section>
         
-        <section id="feature">
-            <div class="container">
-                <div class="row">
-                      <div class="col-md-4 col-sm-4">
-                          <div class="feature-thumb">
-                                <span>01</span>
-                                <h3>Trending Courses</h3>
-                                <p>Known is free education HTML Bootstrap Template. You can download and use this for your website.</p>
-                          </div>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <div class="feature-thumb">
-                                <span>02</span>
-                                <h3>Books & Library</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing eiusmod tempor incididunt ut labore et dolore magna.</p>
-                          </div>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <div class="feature-thumb">
-                                <span>03</span>
-                                <h3>Certified Teachers</h3>
-                                <p>templatemo provides a wide variety of free Bootstrap Templates for you. Please tell your friends about us. Thank you.</p>
-                          </div>
-                      </div>
-                </div>
-            </div>
-        </section>
       
-        
+     
         <section id="login">
             <div class="container">
                 <div class="row">
@@ -137,7 +108,7 @@ class App extends React.Component
                                     <input type="email" name="email" class="form-control" placeholder="Your email address" required="" />
                                     <input type="password" name="password" class="form-control" placeholder="Your password" required="" />
                                     <button class="submit-btn form-control" id="form-submit">Login</button>
-                                    <button class="submit-btn form-control" id="form-submit">Forget password</button>
+                                    <Button variant="link">Forget password</Button>
                                     
 
                                     
@@ -168,17 +139,22 @@ class App extends React.Component
                       <div class="col-md-12 col-sm-12">
                           <div class="section-title">
                                 <h2>Teachers <small>Meet Professional Trainers</small></h2>
+                                
+                  <Button variant="link">Voir plus</Button>
+
+
                           </div>
-                      </div>
+         
+                      
                       <div className="owl-carousel owl-theme owl-courses">
 
-                      <div class="col-md-3 col-sm-6">
+                      <div class="col-md-8 col-sm-7">
                           <div class="team-thumb">
                                 <div class="team-image">
                                     <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
-                                    <h3>Mark Wilson</h3>
+                                    <h4>S</h4>
                                     <span>I love Teaching</span>
                                 </div>
                                 <ul class="social-icon">
@@ -188,13 +164,13 @@ class App extends React.Component
                                 </ul>
                           </div>
                       </div>
-                      <div class="col-md-3 col-sm-6">
+                      <div class="col-md-8 col-sm-7">
                           <div class="team-thumb">
                                 <div class="team-image">
                                     <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
-                                    <h3>Catherine</h3>
+                                    <h4>x</h4>
                                     <span>Education is the key!</span>
                                 </div>
                                 <ul class="social-icon">
@@ -203,13 +179,28 @@ class App extends React.Component
                                 </ul>
                           </div>
                       </div>
-                      <div class="col-md-3 col-sm-6">
+                      <div class="col-md-8 col-sm-4">
                           <div class="team-thumb">
                                 <div class="team-image">
                                     <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
-                                    <h3>Jessie Ca</h3>
+                                    <h4>T</h4>
+                                    <span>Education is the key!</span>
+                                </div>
+                                <ul class="social-icon">
+                                    <li><a href="#" class="fa fa-google"></a></li>
+                                    <li><a href="#" class="fa fa-instagram"></a></li>
+                                </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-8 col-sm-7">
+                          <div class="team-thumb">
+                                <div class="team-image">
+                                    <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
+                                </div>
+                                <div class="team-info">
+                                    <h4>y</h4>
                                     <span>I like Online Courses</span>
                                 </div>
                                 <ul class="social-icon">
@@ -219,14 +210,14 @@ class App extends React.Component
                                 </ul>
                           </div>
                       </div>
-                      <div class="col-md-3 col-sm-6">
+                      <div class="col-md-8 col-sm-7">
                           <div class="team-thumb">
                                 <div class="team-image">
                                     <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
-                                    <h3>Jessie Ca</h3>
-                                    <span>I like Online Courses</span>
+                                    <h4>z</h4>
+                                    <span>Education is the key!</span>
                                 </div>
                                 <ul class="social-icon">
                                     <li><a href="#" class="fa fa-twitter"></a></li>
@@ -235,13 +226,13 @@ class App extends React.Component
                                 </ul>
                           </div>
                       </div>
-                      <div class="col-md-3 col-sm-6">
+                      <div class="col-md-8 col-sm-7">
                           <div class="team-thumb">
                                 <div class="team-image">
                                     <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                 </div>
                                 <div class="team-info">
-                                    <h3>Andrew Berti</h3>
+                                    <h3>p</h3>
                                     <span>Learning is fun</span>
                                 </div>
                                 <ul class="social-icon">
@@ -254,6 +245,7 @@ class App extends React.Component
                 </div>
             </div>
             </div>
+            </div>
         </section>
         
         <section id="courses">
@@ -262,6 +254,8 @@ class App extends React.Component
                       <div class="col-md-12 col-sm-12">
                           <div class="section-title">
                                 <h2>Popular Courses <small>Upgrade your skills with newest courses</small></h2>
+                                <Button variant="link">Voir plus</Button>
+
                           </div>
                           <div className="owl-carousel owl-theme owl-courses">
                                 <div class="col-md-4 col-sm-4">
@@ -269,25 +263,20 @@ class App extends React.Component
                                           <div class="courses-thumb">
                                               <div class="courses-top">
                                                     <div class="courses-image">
-                                                        <img src="assets/images/courses-image1.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/iotarch.png" width="200" height="210" alt="" />
                                                     </div>
-                                                    <div class="courses-date">
-                                                        <span><i class="fa fa-calendar"></i> 12 / 7 / 2018</span>
-                                                        <span><i class="fa fa-clock-o"></i> 7 Hours</span>
-                                                    </div>
+                                               
                                               </div>
                                               <div class="courses-detail">
-                                                    <h3><a href="#">Social Media Management</a></h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <h3><a href="#">Architecture IOT</a></h3>
+                                                    <p>LISI-A03</p>
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
                                                         <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
-                                                        <span>Mark Wilson</span>
+                                                        <span>Salwa</span>
                                                     </div>
-                                                    <div class="courses-price free">
-                                                        <a ><span>Free</span></a>
-                                                    </div>
+                                                   
                                               </div>
                                           </div>
                                     </div>
@@ -297,25 +286,20 @@ class App extends React.Component
                                           <div class="courses-thumb">
                                               <div class="courses-top">
                                                     <div class="courses-image">
-                                                        <img src="assets/images/courses-image2.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/mecan.jpg" width="200" height="210" alt="" />
                                                     </div>
-                                                    <div class="courses-date">
-                                                        <span><i class="fa fa-calendar"></i> 20 / 7 / 2018</span>
-                                                        <span><i class="fa fa-clock-o"></i> 4.5 Hours</span>
-                                                    </div>
+                                                 
                                               </div>
                                               <div class="courses-detail">
-                                                    <h3><a href="#">Graphic & Web Design</a></h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <h3><a href="#">Mecanique</a></h3>
+                                                    <p>LGM-A01</p>
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
                                                         <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
-                                                        <span>Jessica</span>
+                                                        <span>Omar</span>
                                                     </div>
-                                                    <div class="courses-price free">
-                                                        <a ><span>Free</span></a>
-                                                    </div>
+                                                   
                                               </div>
                                           </div>
                                     </div>
@@ -325,25 +309,20 @@ class App extends React.Component
                                           <div class="courses-thumb">
                                               <div class="courses-top">
                                                     <div class="courses-image">
-                                                        <img src="assets/images/courses-image3.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/deeplr.jpg" width="200" height="210" alt="" />
                                                     </div>
-                                                    <div class="courses-date">
-                                                        <span><i class="fa fa-calendar"></i> 15 / 8 / 2018</span>
-                                                        <span><i class="fa fa-clock-o"></i> 6 Hours</span>
-                                                    </div>
+                                                  
                                               </div>
                                               <div class="courses-detail">
-                                                    <h3><a href="#">Marketing Communication</a></h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <h3><a href="#">Deep learning</a></h3>
+                                                    <p>LISI-A03</p>
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
                                                         <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
-                                                        <span>Catherine</span>
+                                                        <span>tarek</span>
                                                     </div>
-                                                    <div class="courses-price free">
-                                                        <a ><span>Free</span></a>
-                                                    </div>
+                                                  
                                               </div>
                                           </div>
                                     </div>
@@ -353,25 +332,20 @@ class App extends React.Component
                                           <div class="courses-thumb">
                                               <div class="courses-top">
                                                     <div class="courses-image">
-                                                        <img src="assets/images/courses-image4.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/algbr.png" width="200" height="210"  alt="" />
                                                     </div>
-                                                    <div class="courses-date">
-                                                        <span><i class="fa fa-calendar"></i> 10 / 8 / 2018</span>
-                                                        <span><i class="fa fa-clock-o"></i> 8 Hours</span>
-                                                    </div>
+                                                   
                                               </div>
                                               <div class="courses-detail">
-                                                    <h3><a href="#">Summer Kids</a></h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <h3><a href="#">Algebre 3</a></h3>
+                                                    <p>LGC-A01</p>
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
                                                         <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
-                                                        <span>Mark Wilson</span>
+                                                        <span>neyla</span>
                                                     </div>
-                                                    <div class="courses-price free">
-                                                        <a ><span>Free</span></a>
-                                                    </div>
+                                                   
                                               </div>
                                           </div>
                                     </div>
@@ -381,25 +355,20 @@ class App extends React.Component
                                           <div class="courses-thumb">
                                               <div class="courses-top">
                                                     <div class="courses-image">
-                                                        <img src="assets/images/courses-image5.jpg" class="img-responsive" alt="" />
+                                                        <img src="assets/images/Electromagnétisme.png" width="200" height="210" alt="" />
                                                     </div>
-                                                    <div class="courses-date">
-                                                        <span><i class="fa fa-calendar"></i> 5 / 10 / 2018</span>
-                                                        <span><i class="fa fa-clock-o"></i> 10 Hours</span>
-                                                    </div>
+                                              
                                               </div>
                                               <div class="courses-detail">
-                                                    <h3><a href="#">Business &amp; Management</a></h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                    <h3><a href="#">Electromagnétisme</a></h3>
+                                                    <p>Prep-A1</p>
                                               </div>
                                               <div class="courses-info">
                                                     <div class="courses-author">
                                                         <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
-                                                        <span>Jessica</span>
+                                                        <span>sami</span>
                                                     </div>
-                                                    <div class="courses-price free">
-                                                        <a href=""><span>Free</span></a>
-                                                    </div>
+                                                  
                                               </div>
                                           </div>
                                     </div>
@@ -409,40 +378,7 @@ class App extends React.Component
                 </div>
             </div>
         </section>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                      <div class="col-md-6 col-sm-12">
-                          <div class="about-info">
-                                <h2>Start your journey to a better life with online practical courses</h2>
-                                <figure>
-                                    <span><i class="fa fa-users"></i></span>
-                                    <figcaption>
-                                          <h3>Professional Trainers</h3>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure>
-                                    <span><i class="fa fa-certificate"></i></span>
-                                    <figcaption>
-                                          <h3>International Certifications</h3>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                    </figcaption>
-                                </figure>
-                                <figure>
-                                    <span><i class="fa fa-bar-chart-o"></i></span>
-                                    <figcaption>
-                                          <h3>Free for 3 months</h3>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                    </figcaption>
-                                </figure>
-                          </div>
-                      </div>
-                      
-                </div>
-            </div>
-        </section>
-      
+        
         <section id="testimonial">
             <div class="container">
                 <div class="row">
@@ -454,13 +390,11 @@ class App extends React.Component
                                 <div class="col-md-4 col-sm-4">
                                     <div class="item">
                                           <div class="tst-image">
-                                              <img src="assets/images/tst-image1.jpg" class="img-responsive" alt="" />
+                                              <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                           </div>
                                           <div class="tst-author">
-                                              <h4>Jackson</h4>
-                                              <span>Shopify Developer</span>
+                                              <h4>Nour</h4>
                                           </div>
-                                          <p>You really do help young creative minds to get quality education and professional job search assistance. I’d recommend it to everyone!</p>
                                           <div class="tst-rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -473,13 +407,11 @@ class App extends React.Component
                                 <div class="col-md-4 col-sm-4">
                                     <div class="item">
                                           <div class="tst-image">
-                                              <img src="assets/images/tst-image2.jpg" class="img-responsive" alt="" />
+                                              <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                           </div>
                                           <div class="tst-author">
-                                              <h4>Camila</h4>
-                                              <span>Marketing Manager</span>
+                                              <h4>Sami</h4>
                                           </div>
-                                          <p>Trying something new is exciting! Thanks for the amazing law course and the great teacher who was able to make it interesting.</p>
                                           <div class="tst-rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -490,13 +422,11 @@ class App extends React.Component
                                 <div class="col-md-4 col-sm-4">
                                     <div class="item">
                                           <div class="tst-image">
-                                              <img src="assets/images/tst-image3.jpg" class="img-responsive" alt="" />
+                                              <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                           </div>
                                           <div class="tst-author">
-                                              <h4>Barbie</h4>
-                                              <span>Art Director</span>
+                                              <h4>Salim</h4>
                                           </div>
-                                          <p>Donec erat libero, blandit vitae arcu eu, lacinia placerat justo. Sed sollicitudin quis felis vitae hendrerit.</p>
                                           <div class="tst-rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -508,13 +438,11 @@ class App extends React.Component
                                 <div class="col-md-4 col-sm-4">
                                     <div class="item">
                                           <div class="tst-image">
-                                              <img src="assets/images/tst-image4.jpg" class="img-responsive" alt="" />
+                                              <img src="assets/images/inconnue.jpg" class="img-responsive" alt="" />
                                           </div>
                                           <div class="tst-author">
-                                              <h4>Andrio</h4>
-                                              <span>Web Developer</span>
+                                              <h4>Chedli</h4>
                                           </div>
-                                          <p>Nam eget mi eu ante faucibus viverra nec sed magna. Vivamus viverra sapien ex, elementum varius ex sagittis vel.</p>
                                           <div class="tst-rating">
                                               <i class="fa fa-star"></i>
                                               <i class="fa fa-star"></i>
@@ -528,6 +456,7 @@ class App extends React.Component
                   </div>
             </div>
         </section> 
+       
       
         <section id="contact">
             <div class="container">
@@ -535,19 +464,26 @@ class App extends React.Component
                       <div class="col-md-6 col-sm-12">
                           <form id="contact-form" role="form">
                                 <div class="section-title">
-                                    <h2>Contact us <small>we love conversations. let us talk!</small></h2>
-                                </div>
-                                <div class="col-md-12 col-sm-12">
+                                           <h2>Contact us <small>we love conversations. let us talk!</small></h2>
+                                  </div>
+                                  <div class="col-md-12 col-sm-12">
                                     <input type="text" class="form-control" placeholder="Enter full name" name="name" required="" />
                       
                                     <input type="email" class="form-control" placeholder="Enter email address" name="email" required="" />
                                     <textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message" required=""></textarea>
+                               
+                               
+                                   </div>
+                                    <div className="App">
+                                    <StarRating/>
                                 </div>
                                 <div class="col-md-4 col-sm-12">
                                     <input type="button" class="form-control" name="send message" value="Send Message" />
                                 </div>
+                              
                           </form>
                       </div>
+                      
                       <div class="col-md-6 col-sm-12">
                           <div class="contact-image">
                                 <img src="assets/images/contact-image.jpg" class="img-responsive" alt="Smiling Two Girls" />
@@ -555,6 +491,7 @@ class App extends React.Component
                       </div>
                 </div>
             </div>
+         
         </section>       
       
         <footer id="footer">
@@ -598,10 +535,9 @@ class App extends React.Component
                                 <div class="footer_menu">
                                     <h2>Quick Links</h2>
                                     <ul>
-                                          <li><a href="#">Career</a></li>
-                                          <li><a href="#">Investor</a></li>
-                                          <li><a href="#">Terms & Conditions</a></li>
-                                          <li><a href="#">Refund Policy</a></li>
+                                          <li><a href="http://www.issatso.rnu.tn/fo/presentation/historique.php">A propos de l'ISSAT</a></li><br></br>
+                                          <li><a href="http://www.mes.tn/">Ministère Ens. Sup. Rech. Sc.</a></li> <br></br>
+                                          <li><a href="https://www4.inscription.tn/">Inscription.tn</a></li>
                                     </ul>
                                 </div>
                           </div>
