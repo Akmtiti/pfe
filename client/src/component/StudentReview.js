@@ -22,15 +22,15 @@ function StudentReview() {
 
   return (
     <section id="testimonial">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-            <div class="section-title">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 col-sm-12">
+            <div className="section-title">
               <h2>
                 Student Reviews <small>from around the world</small>
               </h2>
             </div>
-            <div class="owl-carousel owl-theme owl-client">{reviews()}</div>
+            <div className="owl-carousel owl-theme owl-client">{reviews()}</div>
           </div>
         </div>
       </div>
@@ -39,21 +39,21 @@ function StudentReview() {
 
   function reviews() {
     return fetchedReviews.map((review, key) => (
-      <div key={key} class="col-md-4 col-sm-4">
-        <div class="item">
-          <div class="tst-image">
+      <div key={key} className="col-md-4 col-sm-4">
+        <div className="item">
+          <div className="tst-image">
             <img
               src="assets/images/inconnue.jpg"
-              class="img-responsive"
+              className="img-responsive"
               alt=""
             />
           </div>
-          <div class="tst-author">
+          <div className="tst-author">
             <h4>{review.studentId.username} </h4>
           </div>
-          <div class="tst-rating">
+          <div className="tst-rating">
             {[...Array(review.rating)].map((e, i) => (
-              <i class="fa fa-star"></i>
+              <i key={i} className="fa fa-star"></i>
             ))}
           </div>
         </div>

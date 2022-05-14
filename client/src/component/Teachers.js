@@ -18,10 +18,10 @@ function Teachers() {
 
   return (
     <section id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-            <div class="section-title">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 col-sm-12">
+            <div className="section-title">
               <h2>
                 Teachers <small>Meet Professional Trainers</small>
               </h2>
@@ -42,32 +42,32 @@ function Teachers() {
     return (
       <>
         {fetchedTeachers.map((teacher, key) => (
-          <div key={key} class="col-md-8 col-sm-7">
-            <div class="team-thumb">
-              <div class="team-image">
+          <div key={key} className="col-md-8 col-sm-7">
+            <div className="team-thumb">
+              <div className="team-image">
                 <img
                   src="assets/images/inconnue.jpg"
-                  class="img-responsive"
+                  className="img-responsive"
                   alt=""
                 />
               </div>
-              <div class="team-info">
+              <div className="team-info">
                 <h4> {teacher.username} </h4>
                 <span>I love Teaching</span>
               </div>
-              <ul class="social-icon">
+              <ul className="social-icon">
                 <li>
                   <a
                     href="#"
-                    class="fa fa-facebook-square"
+                    className="fa fa-facebook-square"
                     attr="facebook icon"
                   ></a>
                 </li>
                 <li>
-                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" className="fa fa-twitter"></a>
                 </li>
                 <li>
-                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" className="fa fa-instagram"></a>
                 </li>
               </ul>
             </div>

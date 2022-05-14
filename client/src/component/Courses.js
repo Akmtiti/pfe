@@ -26,7 +26,7 @@ const fetchedCourses = [
 ] // {
 //   "_id": "627caf92946021847420b826",
 //   "courseName": "Physique 4",
-//   "className": "LISI 2",
+//   "classNameName": "LISI 2",
 //   "imagePath": "image0.png",
 //   "teacherId": "627c06b7c9c8f5fe02d3a0d4",
 //   "__v": 0
@@ -39,10 +39,10 @@ function Courses() {
   }, [])
   return (
     <section id="courses">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-            <div class="section-title">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 col-sm-12">
+            <div className="section-title">
               <h2>
                 Popular Courses{" "}
                 <small>Upgrade your skills with newest courses</small>
@@ -61,11 +61,11 @@ function Courses() {
 
   function renderCourses() {
     return fetchedCourses.map((course, key) => (
-      <div class="col-md-4 col-sm-4">
-        <div class="item">
-          <div class="courses-thumb">
-            <div class="courses-top">
-              <div class="courses-image">
+      <div key={key}  className="col-md-4 col-sm-4">
+        <div className="item">
+          <div className="courses-thumb">
+            <div className="courses-top">
+              <div className="courses-image">
                 <img
                   src={baseUrl + course.imagePath}
                   width="200"
@@ -73,17 +73,17 @@ function Courses() {
                   alt="" />
               </div>
             </div>
-            <div class="courses-detail">
+            <div className="courses-detail">
               <h3>
                 <a href="#"> {course.courseName} </a>
               </h3>
               <p>LISI-A03</p>
             </div>
-            <div class="courses-info">
-              <div class="courses-author">
+            <div className="courses-info">
+              <div className="courses-author">
                 <img
                   src="assets/images/inconnue.jpg"
-                  class="img-responsive"
+                  className="img-responsive"
                   alt="" />
                 <span>{course.teacherId.username} </span>
               </div>

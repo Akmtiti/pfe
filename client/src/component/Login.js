@@ -27,14 +27,14 @@ function Login({setConnectedUser}) {
   }
 
   return (
-    <div class="col-md-offset-1 col-md-4 col-sm-12">
-      <div class="entry-form">
+    <div className="col-md-offset-1 col-md-4 col-sm-12">
+      <div className="entry-form">
         <h2>SIGN IN </h2>
         <input
           onChange={(event) => setEmail(event.target.value)}
           type="email"
           name="email"
-          class="form-control"
+          className="form-control"
           placeholder="Your email address"
           required=""
         />
@@ -42,13 +42,13 @@ function Login({setConnectedUser}) {
           onChange={(event) => setPassword(event.target.value)}
           type="password"
           name="password"
-          class="form-control"
+          className="form-control"
           placeholder="Your password"
           required=""
         />
         <button
           onClick={submit}
-          class="submit-btn form-control"
+          className="submit-btn form-control"
           id="form-submit"
         >
           Login

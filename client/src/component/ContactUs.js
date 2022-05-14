@@ -25,20 +25,20 @@ function ContactUs() {
 
   return (
     <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 col-sm-12">
             <form id="contact-form" role="form">
-              <div class="section-title">
+              <div className="section-title">
                 <h2>
                   Contact us <small>we love conversations. let us talk!</small>
                 </h2>
               </div>
-              <div class="col-md-12 col-sm-12">
+              <div className="col-md-12 col-sm-12">
                 <input
                   onChange={(event) => setName(event.target.value)}
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Enter full name"
                   name="name"
                   required=""
@@ -47,14 +47,14 @@ function ContactUs() {
                 <input
                   onChange={(event) => setEmail(event.target.value)}
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Enter email address"
                   name="email"
                   required=""
                 />
                 <textarea
                   onChange={(event) => setMessage(event.target.value)}
-                  class="form-control"
+                  className="form-control"
                   rows="6"
                   placeholder="Tell us about your message"
                   name="message"
@@ -64,11 +64,11 @@ function ContactUs() {
               <div className="App">
                 <StarRating />
               </div>
-              <div class="col-md-4 col-sm-12">
+              <div className="col-md-4 col-sm-12">
                 <input
                   onClick={submit}
                   type="button"
-                  class="form-control"
+                  className="form-control"
                   name="send message"
                   value="Send Message"
                 />
@@ -77,11 +77,11 @@ function ContactUs() {
             </form>
           </div>
 
-          <div class="col-md-6 col-sm-12">
-            <div class="contact-image">
+          <div className="col-md-6 col-sm-12">
+            <div className="contact-image">
               <img
                 src="assets/images/contact-image.jpg"
-                class="img-responsive"
+                className="img-responsive"
                 alt="Smiling Two Girls"
               />
             </div>
