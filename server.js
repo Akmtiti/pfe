@@ -11,6 +11,7 @@ import courseRouter from "./routes/course.js"
 import teacherRouter from "./routes/teacher.js"
 import reviewRouter from "./routes/review.js"
 import contactUsRouter from "./routes/contactUs.js"
+import customRouter from "./routes/custom.js"
 
 // Restore password
 recoverPassword(app)
@@ -27,3 +28,4 @@ app.use(courseRouter)
 app.use(teacherRouter)
 app.use(reviewRouter)
 app.use(contactUsRouter)
+app.use(customRouter)

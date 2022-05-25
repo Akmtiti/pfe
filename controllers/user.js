@@ -1,9 +1,10 @@
 import User from "../models/userModel.js"
 import bcrypt from "bcrypt"
 export const deleteUser = async (req, res) => {
-  console.log(req.body)
-  await User.deleteOne({ username: req.body.username })
-  res.send(req.body.username + " a été supprimé")
+  const { id } = req.params
+
+  await User.deleteOne({ _id: id })
+  res.send("Delete one success.")
 }
 export const modifyUser = async (req, res) => {
   // Check Valid Email
@@ -71,8 +72,10 @@ export const login = async (req, res) => {
     return res.status(500).send("Compte introuvable.")
   }
 
-  let result = await User.findOne({ password: req.body.password })
-  console.log(result)
+  let result = await User.findOne({
+    email: req.body.email,
+    password: req.body.password,
+  })
 
   if (result) {
     res.send(result.username)
@@ -137,7 +140,46 @@ export const signUp = async (req, res) => {
   registerNewUser()
 }
 
+export const getFields = async (req, res) => {
+  const { filter = "{}", fields = "{}" } = req.query
+
+  let users = await User.find(JSON.parse(filter), {
+    password: 0,
+    passwordRecovery: 0,
+    ...JSON.parse(fields),
+  })
+
+  res.send(users)
+}
+
+export const addEditUser = async (req, res) => {
+  const { _id, email, password, username } = req.body
+
+  // Edit
+  if (_id) {
+    let updatedUser = await User.findOneAndUpdate(
+      { _id: _id },
+      { $set: req.body }
+    )
+    return res.send(updatedUser)
+  }
+
+  delete req.body?._id
+  // Add
+  if (!email || !password || !username)
+    return res.status(500).send("Email, password and username are required.")
+
+  if ((await User.countDocuments({ email: email })) !== 0)
+    return res.status(500).send("Email is already used.")
+
+  let createdUser = await User.create(req.body)
+  res.send(createdUser)
+}
 
 function checkValidEmail(x) {
   return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x)
 }
+// await User.updateMany(
+//   { privilege: "teacher" },
+//   { $set: { privilege: "Teacher" } }
+// )

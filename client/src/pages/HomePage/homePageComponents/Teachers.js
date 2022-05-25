@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Button from "react-bootstrap/Button"
-import { Axios } from "../axios"
+import { Axios } from "../../../axios"
 
 const fetchedTeachers = [
   "Teacheer1 ",

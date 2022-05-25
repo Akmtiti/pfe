@@ -1,7 +1,7 @@
 import React from "react";
 import { MDBCol, MDBInput } from "mdbreact";
 
-const SearchPage = () => {
+const Search = () => {
   return (
     <MDBCol md="3">
       <MDBInput hint="Search" type="text" containerClass="active-pink active-pink-2 mt-0 mb-3" />
@@ -9,4 +9,4 @@ const SearchPage = () => {
   );
 }
 
-export default SearchPage;
+export default Search;

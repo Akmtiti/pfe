@@ -1,35 +1,46 @@
 import React, { useEffect, useState } from "react"
-import { Axios } from "../axios"
 import Button from "react-bootstrap/Button"
+import { Axios } from "../../../axios"
 
-function Login({setConnectedUser}) {
+function Signup() {
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
   const [feedback, setFeedback] = useState("")
 
   const submit = () => {
-    console.log(email)
-    console.log(password)
+    if (password !== confirmPassword)
+      return setFeedback("Mot de passe non identique.")
 
-    Axios.post("/user/login", {
+    Axios.post("/user/singup", {
+      username: name,
       email: email,
       password: password,
+      privilege: "student",
     })
       .then((res) => {
-        console.log(res)
-          setFeedback("Connecté.")
-          setConnectedUser(res.data)
+        setFeedback("Compte créé.")
       })
       .catch((err) => {
-        console.log(err)
-        setFeedback("Erreur lors de la connection.")
+        setFeedback(
+          err.response.data || "Erreur lors de la création de compte."
+        )
       })
   }
 
   return (
     <div className="col-md-offset-1 col-md-4 col-sm-12">
       <div className="entry-form">
-        <h2>SIGN IN </h2>
+        <h2>SIGN UP</h2>
+        <input
+          onChange={(event) => setName(event.target.value)}
+          type="text"
+          name="full name"
+          className="form-control"
+          placeholder="Full name"
+          required=""
+        />
         <input
           onChange={(event) => setEmail(event.target.value)}
           type="email"
@@ -43,7 +54,15 @@ function Login({setConnectedUser}) {
           type="password"
           name="password"
           className="form-control"
-          placeholder="Your password"
+          placeholder="Password"
+          required=""
+        />
+        <input
+          onChange={(event) => setConfirmPassword(event.target.value)}
+          type="password"
+          name="password"
+          className="form-control"
+          placeholder="Confirm password"
           required=""
         />
         <button
@@ -51,13 +70,12 @@ function Login({setConnectedUser}) {
           className="submit-btn form-control"
           id="form-submit"
         >
-          Login
+          Get started
         </button>
-        <p>{feedback}</p>
-        <Button variant="link">Forget password</Button>
+        {feedback}
       </div>
     </div>
   )
 }
 
-export default Login
+export default Signup

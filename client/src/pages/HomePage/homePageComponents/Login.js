@@ -1,46 +1,35 @@
 import React, { useEffect, useState } from "react"
+import { Axios } from "../../../axios"
 import Button from "react-bootstrap/Button"
-import { Axios } from "../axios"
 
-function Signup() {
-  const [name, setName] = useState("")
+function Login({setConnectedUser}) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [confirmPassword, setConfirmPassword] = useState("")
   const [feedback, setFeedback] = useState("")
 
   const submit = () => {
-    if (password !== confirmPassword)
-      return setFeedback("Mot de passe non identique.")
+    console.log(email)
+    console.log(password)
 
-    Axios.post("/user/singup", {
-      username: name,
+    Axios.post("/user/login", {
       email: email,
       password: password,
-      privilege: "student",
     })
       .then((res) => {
-        setFeedback("Compte créé.")
+        console.log(res)
+          setFeedback("Connecté.")
+          setConnectedUser(res.data)
       })
       .catch((err) => {
-        setFeedback(
-          err.response.data || "Erreur lors de la création de compte."
-        )
+        console.log(err)
+        setFeedback("Erreur lors de la connection.")
       })
   }
 
   return (
     <div className="col-md-offset-1 col-md-4 col-sm-12">
       <div className="entry-form">
-        <h2>SIGN UP</h2>
-        <input
-          onChange={(event) => setName(event.target.value)}
-          type="text"
-          name="full name"
-          className="form-control"
-          placeholder="Full name"
-          required=""
-        />
+        <h2>SIGN IN </h2>
         <input
           onChange={(event) => setEmail(event.target.value)}
           type="email"
@@ -54,15 +43,7 @@ function Signup() {
           type="password"
           name="password"
           className="form-control"
-          placeholder="Password"
-          required=""
-        />
-        <input
-          onChange={(event) => setConfirmPassword(event.target.value)}
-          type="password"
-          name="password"
-          className="form-control"
-          placeholder="Confirm password"
+          placeholder="Your password"
           required=""
         />
         <button
@@ -70,12 +51,13 @@ function Signup() {
           className="submit-btn form-control"
           id="form-submit"
         >
-          Get started
+          Login
         </button>
-        {feedback}
+        <p>{feedback}</p>
+        <Button variant="link">Forget password</Button>
       </div>
     </div>
   )
 }
 
-export default Signup
+export default Login

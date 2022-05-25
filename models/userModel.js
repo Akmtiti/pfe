@@ -9,7 +9,7 @@ const userScheme = mongoose.Schema({
     type: String,
     default: null,
   },
-  privilege: { type: String, required: true },
+  privilege: { type: String, required: true }, // Teacher Student Admin
   token: { type: String, default: null },
   refreshToken: { type: String, default: null },
 });

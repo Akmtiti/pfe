@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Axios } from "../axios"
+import { Axios } from "../../../axios"
 
 const fetchedReviews = [
   { username: "Stud1", rating: 5, message: "Message" },
