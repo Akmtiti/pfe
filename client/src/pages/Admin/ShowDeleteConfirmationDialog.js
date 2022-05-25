@@ -7,7 +7,7 @@ import DialogContentText from "@mui/material/DialogContentText"
 import DialogTitle from "@mui/material/DialogTitle"
 import { useState } from "react"
 import { IconButton } from "@mui/material"
-import { PULL_FETCHED_USERS_DATA, SET_USER_FEEDBACK } from "../../store/actions"
+import { PULL_FETCHED_DATA, PULL_FETCHED_USERS_DATA, SET_FEEDBACK, SET_USER_FEEDBACK } from "../../store/actions"
 import { useDispatch } from "react-redux"
 import { Axios } from "../../axios"
 
@@ -25,11 +25,11 @@ export default function ShowConfirmationDialog({
   const handleDeleteUser = async () => {
     await Axios.delete(`/user/deleteUser/${userToDelete._id}`)
     dispatch({
-      type: PULL_FETCHED_USERS_DATA,
-      payload: userToDelete,
+      type: PULL_FETCHED_DATA,
+      payload: { scheme: "fetchedUsersData", ...userToDelete },
     })
     dispatch({
-      type: SET_USER_FEEDBACK,
+      type: SET_FEEDBACK,
       payload: "User has been deleted : " + userToDelete.username,
     })
     handleClose()

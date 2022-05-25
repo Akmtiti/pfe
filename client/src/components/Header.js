@@ -90,6 +90,9 @@ function Header() {
             <a href="/courses">
               courses page
             </a>
+            <a href="/uploadCourse">
+              upload page
+            </a>
          </Stack>
         </div>
       </div>

@@ -11,8 +11,11 @@ import { Axios } from "./../../axios"
 import { useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
 import {
+  PUSH_FETCHED_DATA,
   PUSH_FETCHED_USERS_DATA,
+  SET_FEEDBACK,
   SET_USER_FEEDBACK,
+  UPDATE_FETCHED_DATA,
   UPDATE_FETCHED_USERS_DATA,
 } from "./../../store/actions"
 import { useEffect } from "react"
@@ -59,22 +62,22 @@ function AddEditUserDialog({
       // Edit
       if (userData) {
         dispatch({
-          type: UPDATE_FETCHED_USERS_DATA,
-          payload: userFormData,
+          type: UPDATE_FETCHED_DATA,
+          payload: { scheme: "fetchedUsersData", ...userFormData },
         })
         dispatch({
-          type: SET_USER_FEEDBACK,
+          type: SET_FEEDBACK,
           payload: "User has been updated : " + userFormData.username,
         })
         return handleClose()
       }
       // Add
       dispatch({
-        type: PUSH_FETCHED_USERS_DATA,
-        payload: createdUser,
+        type: PUSH_FETCHED_DATA,
+        payload: { scheme: "fetchedUsersData", ...createdUser },
       })
       dispatch({
-        type: SET_USER_FEEDBACK,
+        type: SET_FEEDBACK,
         payload: "New user has been added : " + userFormData.username,
       })
       handleClose()

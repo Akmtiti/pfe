@@ -20,16 +20,17 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever"
 import ShowConfirmationDialog from "./ShowDeleteConfirmationDialog"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { SET_FETCHED_DATA } from './../../store/actions';
+import { SET_FETCHED_DATA } from "./../../store/actions"
 
 const currentUser = JSON.parse(localStorage.getItem("currentUser"))
 function AdminPage() {
   // if (currentUser?.role !== 'Admin') window.location.href = "/"
   const [selectedSchemeTable, setSelectedSchemeTable] = useState("Teacher") // "Teacher" or "Student"
   // const [feedback, setFeedback] = useState("")
-  const { fetchedUsersData, feedback } = useSelector((state) => state.user)
-  const { branchData } = useSelector((state) => state.scheme)
-  console.log(branchData)
+  // const { fetchedUsersData, feedback } = useSelector((state) => state.user)
+  const { fetchedUsersData, fetchedBranchData, fetchedClassData, feedback } =
+    useSelector((state) => state.scheme)
+  console.log(fetchedUsersData)
   const dispatch = useDispatch()
 
   // Fetch and dispatch
@@ -43,27 +44,55 @@ function AdminPage() {
 
   useEffect(async () => {
     let fetchedSchemeData = []
+    let schemeSelector = ""
     switch (selectedSchemeTable) {
       case "Teacher":
       case "Student":
-        fetchedSchemeData = await Axios.post("/custom", {
-          filters: {
-            privilege: { $in: ["Student", "Teacher"] },
-          },
-          scheme: "user",
-          method: "get",
-        })
+        schemeSelector = "fetchedUsersData"
+
+        if (fetchedUsersData.length === 0)
+          fetchedSchemeData = await Axios.post("/custom", {
+            filters: {
+              privilege: { $in: ["Student", "Teacher"] },
+            },
+            scheme: "user",
+            method: "get",
+          })
+
+        break
+      case "Branch":
+        schemeSelector = "fetchedBranchData"
+
+        if (fetchedBranchData.length === 0)
+          fetchedSchemeData = await Axios.post("/custom", {
+            scheme: "branch",
+            method: "get",
+          })
+
+        break
+      case "Class":
+        schemeSelector = "fetchedClassData"
+
+        if (fetchedClassData.length === 0)
+          fetchedSchemeData = await Axios.post("/custom", {
+            scheme: "class",
+            method: "get",
+          })
 
         break
 
       default:
         break
     }
+    if (fetchedSchemeData.length !== 0)
+      if (fetchedSchemeData?.data?.length !== 0) {
+        console.log(fetchedSchemeData)
 
-    dispatch({
-      type: SET_FETCHED_DATA,
-      payload: {branchData :fetchedSchemeData.data},
-    })
+        dispatch({
+          type: SET_FETCHED_DATA,
+          payload: { [schemeSelector]: fetchedSchemeData.data },
+        })
+      }
   }, [selectedSchemeTable])
 
   // Handles

@@ -5,7 +5,7 @@ import { Axios } from "../../axios"
 import { Box, CircularProgress, Grid } from "@mui/material"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-import AccordionCourses from "./AccordionCourses"
+import AccordionBranch from "./AccordionBranch"
 
 
 const currentUser = JSON.parse(localStorage.getItem("currentUser"))
@@ -28,7 +28,7 @@ function CoursesPage() {
       <div className="teachersPage">
         <h1>Courses</h1>
         {fetchedCourses.length ? (
-          <AccordionCourses />
+          <AccordionBranch />
         ) : (
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <CircularProgress />

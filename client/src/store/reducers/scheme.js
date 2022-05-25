@@ -3,8 +3,8 @@ const scheme = (
   state = {
     feedback: "",
     fetchedUsersData: [], // List of users (privilege : Teachers / Students)
-    branchData: [],
-    classData: [],
+    fetchedBranchData: [],
+    fetchedClassData: [],
   },
   action
 ) => {
@@ -16,7 +16,7 @@ const scheme = (
     case actionType.PUSH_FETCHED_DATA:
       return {
         ...state,
-        [payload.scheme]: [...state[payload.scheme], payload.schemeData],
+        [payload.scheme]: [...state[payload.scheme], payload],
       }
     case actionType.PULL_FETCHED_DATA:
       return {
@@ -44,4 +44,4 @@ const scheme = (
 }
 
 export default scheme
-// dispatch({type :UNREAD_MESSAGES, payload : 0 })
+// dispatch({type :UNREAD_MESSAGES, payload : { scheme: "fetchedUsersData", ...userFormData } })
