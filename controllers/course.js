@@ -1,11 +1,6 @@
 import courseModel from "../models/courseModel.js"
 
 export const createCourse = async (req, res) => {
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
   let count = await courseModel.countDocuments({
     courseName: req.body.courseName,
     className: req.body.className,
@@ -20,8 +15,6 @@ export const createCourse = async (req, res) => {
     }
   })
 }
-<<<<<<< Updated upstream
-=======
 
 export const updateCourse = async (req, res) => {
   const { id } = req.params
@@ -43,4 +36,3 @@ export const addFilePath = async (req, res) => {
 
   res.send("Success")
 }
->>>>>>> Stashed changes
